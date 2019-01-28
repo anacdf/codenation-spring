@@ -3,20 +3,14 @@ package com.example.biblioteca.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="livros")
 public class Livro {
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Id
-    Long id;
+    Integer id;
 
     @Column(name = "nome")
     String nome;
@@ -34,12 +28,20 @@ public class Livro {
 
     }
 
-    public Livro(Long id, String nome, String descricao, String autor, String editora) {
+    public Livro(Integer id, String nome, String descricao, String autor, String editora) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.autor = autor;
         this.editora = editora;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {

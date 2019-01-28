@@ -22,7 +22,7 @@ public class LivroController {
         return livroService.buscarTodosLivros();
     }
 
-    @GetMapping("/livro")
+    @GetMapping("/livro/{nome}")
     public Livro retornarLivroPorNome(@PathVariable String nome){
         return livroService.buscarLivroPorNome(nome);
     }

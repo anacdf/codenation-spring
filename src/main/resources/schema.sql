@@ -1,0 +1,1 @@
+CREATE TABLE livros (id INTEGER PRIMARY KEY,nome TEXT ,descricao TEXT,autor TEXT,editora TEXT);
